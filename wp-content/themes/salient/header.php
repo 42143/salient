@@ -153,8 +153,10 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false' || $page_full_s
 					
 					<a id="logo" href="<?php echo home_url(); ?>" <?php echo $logo_class; ?>>
 
-						<?php nectar_logo_output($activate_transparency, $sideWidgetClass); ?> 
-
+						<?php //nectar_logo_output($activate_transparency, $sideWidgetClass); ?>
+                        <img class="stnd default-logo dark-version" alt="themenectar – Just another WordPress site" src="http://themenectar.com/wp-content/uploads/2018/05/salient-dark-1.png" style="height: 24px;">
+                        <img class="starting-logo default-logo" alt="themenectar – Just another WordPress site" src="http://themenectar.com/wp-content/uploads/2018/05/starting-1.png" style="height: 24px;">
+                        
 					</a>
 
 				</div><!--/span_3-->
@@ -170,7 +172,7 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false' || $page_full_s
 					if (!empty($options['enable-cart']) && $options['enable-cart'] == '1') { 
 						if ($woocommerce) { ?> 
 							<!--mobile cart link-->
-							<a id="mobile-cart-link" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><i class="icon-salient-cart"></i></a>
+							<!--<a id="mobile-cart-link" href="<?php //echo $woocommerce->cart->get_cart_url(); ?>"><i class="icon-salient-cart"></i></a>-->
 						<?php } 
 					} 
 					
@@ -210,6 +212,7 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false' || $page_full_s
 								echo '</li>';
 							}
 							?>
+                            <li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-46"><a href="http://themeforest.net/item/salient-responsive-multipurpose-theme/4363266" style="padding-bottom: 29px; padding-top: 1px;">Buy Now</a></li>
 						</ul>
 						
 					</nav>
@@ -265,12 +268,19 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false' || $page_full_s
 			$nav_cart_style = (!empty($options['ajax-cart-style'])) ? $options['ajax-cart-style'] : 'default';
 		?>
 			
-		<div class="cart-outer" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>" data-cart-style="<?php echo $nav_cart_style; ?>">
+		<!--<div class="cart-outer" data-user-set-ocm="<?php //echo $userSetSideWidgetArea; ?>" data-cart-style="<?php //echo $nav_cart_style; ?>">
 			<div class="cart-menu-wrap">
 				<div class="cart-menu">
-					<a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><div class="cart-icon-wrap"><i class="icon-salient-cart"></i> <div class="cart-wrap"><span><?php echo $woocommerce->cart->cart_contents_count; ?> </span></div> </div></a>
+					<a class="cart-contents" href="<?php //echo $woocommerce->cart->get_cart_url(); ?>">
+                        <div class="cart-icon-wrap">
+                            <i class="icon-salient-cart"></i>
+                            <div class="cart-wrap">
+                                <span><?php //echo $woocommerce->cart->cart_contents_count; ?> </span>
+                            </div> 
+                        </div>
+                    </a> 
 				</div>
-			</div>
+			</div>-->
 			
 			<div class="cart-notification">
 				<span class="item-name"></span> <?php echo __('was successfully added to your cart.', NECTAR_THEME_NAME); ?>
